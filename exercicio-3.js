@@ -1,3 +1,50 @@
+
+let pessoa1 = prompt('Qual e o nome da primeira pessoa?')
+let idade1= Number(prompt(`${pessoa1} digita tua idade`))
+
+prompt(`Deseja adicionar outra pessoa? (SIM / NÃO)`)
+    
+let pessoa2 = prompt('Qual e o nome da segunda pessoa?')
+let idade2= Number(prompt(`${pessoa2} digita tua idade`))
+
+
+console.log(`Registro de: \n ${pessoa1} \n ${pessoa2}`)
+
+
+if (idade1 > idade2) {
+    console.log(`A pessoa mais velho/a é: \n ${pessoa1}`)
+} else {
+    console.log(`A pessoa mais velho/a é: \n ${pessoa2}`)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //criando novos tipos de objetos
 /*
 function Person(name, age) {
@@ -35,7 +82,7 @@ new Pessoa('Bob',28,azul);
 */
 
 //exercicio da aula 9
-
+/*
 function clickedButton() {
     console.log('o botao foi clicado');
 }
@@ -63,3 +110,5 @@ function displayValue(event){
 document.querySelector('#btnAddTask').addEventListener('click', addNewTask)
 document.querySelector('#newTask').addEventListener('change', displayValue)
 document.querySelector('#newTask').addEventListener('change', addNewTask)
+
+*/
