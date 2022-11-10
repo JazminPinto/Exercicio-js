@@ -2,20 +2,21 @@
 let pessoa1 = prompt('Qual e o nome da primeira pessoa?')
 let idade1= Number(prompt(`${pessoa1} digita tua idade`))
 
-prompt(`Deseja adicionar outra pessoa? (SIM / NÃO)`)
-    
+confirm (`deseja adicionar outra pessoa? (S/N)`)
+
 let pessoa2 = prompt('Qual e o nome da segunda pessoa?')
 let idade2= Number(prompt(`${pessoa2} digita tua idade`))
-
+    
 
 console.log(`Registro de: \n ${pessoa1} \n ${pessoa2}`)
 
 
 if (idade1 > idade2) {
-    console.log(`A pessoa mais velho/a é: \n ${pessoa1}`)
+    console.log(`A pessoa mais velho/a é: \n ${pessoa1}, ${idade1} anos`)
 } else {
-    console.log(`A pessoa mais velho/a é: \n ${pessoa2}`)
+    console.log(`A pessoa mais velho/a é: \n ${pessoa2}, ${idade2} anos`)
 }
+
 
 
 
