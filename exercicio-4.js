@@ -34,19 +34,29 @@ document.querySelector('#newTask').addEventListener('change', addNewTask)
 
 //exercicio da aula 10
 
-function newTask() {
+function registro() {
     let input = document.querySelector('#registro');
 
     let registro = input.value;
-    input.value= '#registro';
-    console.log(newTask);
+    input.value= '';
+    //console.log(registro);
 
     let listItem = document.createElement('li');
-    listItem.textContent = newTask;
+    listItem.textContent = registro;
 
     lista.appendChild(listItem);
     
 
+}
+function idade() {
+    let input = document.querySelector('#idade');
+
+    let idade = input.value;
+    input.value= '';
+    console.log(idade);
+
+    let listItem = document.createElement('li');
+    listItem.textContent = idade;
 }
 
 //console.log(`registro de: ${registro}`)
@@ -58,9 +68,9 @@ function displayValue(event){
 }
 
 
-document.querySelector('#butaoregistrar').addEventListener('click', registro)
 document.querySelector('#registro').addEventListener('change', displayValue)
-document.querySelector('#registro').addEventListener('change', registro)
+document.querySelector('#idade').addEventListener('change', idade)
+document.querySelector('#butaoregistrar').addEventListener('click', registro, idade)
 
 
 
