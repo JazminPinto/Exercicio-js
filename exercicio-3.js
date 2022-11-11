@@ -1,37 +1,78 @@
+//aqui vamos a declarar tudo que seja possivel
+let pessoas = []
+let nome
+let idade
+let cor
+let animal
 
-let pessoa1 = prompt('Qual e o nome da primeira pessoa?')
-let idade1= Number(prompt(`${pessoa1} digita tua idade`))
-
-confirm (`deseja adicionar outra pessoa? (S/N)`)
-
-let pessoa2 = prompt('Qual e o nome da segunda pessoa?')
-let idade2= Number(prompt(`${pessoa2} digita tua idade`))
-    
-
-console.log(`Registro de: \n ${pessoa1} \n ${pessoa2}`)
-
-
-if (idade1 > idade2) {
-    console.log(`A pessoa mais velho/a é: \n ${pessoa1}, ${idade1} anos`)
-} else {
-    console.log(`A pessoa mais velho/a é: \n ${pessoa2}, ${idade2} anos`)
+//devemos colocar sempre um funcion usaremos this.
+function Pessoa(nome, idade, cor) {
+    this.nome = nome;
+    this.idade = idade;
+    this.cor = cor;
+    this.animal = animal;
 }
 
+//para fazer repetiçao e pouco ussado o while mas nos vamos a usar
+//dentro do while colocaremos o que ja declaramos sem o let e com prompt mais a mensagem que queremos mostrar
+while (question != 'n') {
+    nome = prompt('Digite o seu nome')
+    idade = Number(prompt(`${nome} qual é tua idade?`))
+    cor = prompt (`Certo, ${nome} agora, qual é sua cor favorita?`)
+    animal = prompt (`Bom, agora para finalizar, digite qual é seu animal favorito ${nome}`)
 
+    let pessoa = new Pessoa(nome, idade, cor, animal)
 
+    pessoas.push(pessoa) //isto e para adicionar uma nova pessoa na lista dos arrays []
+    var question = prompt('Deseja fazer registro de outra pessoa? (S/N)')
 
+}
 
+//nesta parte ja vamos a mostrar os valores recoletados  usando console.log para mostrar no console
+console.log('Quantidade de pessoas registradas:')
+console.log(pessoas.length)
+console.log('') //para deixar um espaço em branco
 
+console.log('Nome das Pessoas Registradas:')
+pessoas.forEach(pessoa => console.log(pessoa['nome']))
+console.log('')
 
+console.log('Cor favorito das Pessoas Registradas:')
+pessoas.forEach(cor => console.log(cor['cor']))
+console.log('')
 
+console.log('Animal favorito das Pessoas Registradas:')
+pessoas.forEach(animal => console.log(animal['animal']))
+console.log('')
 
+console.log('Vamos observar quem é a pessoa mais velha e mais jovem e suas cores e animais favoritos? Vamos...')
 
+let pessoaMaisVelha = pessoas.sort((a ,b) => { //sort sempre va junto ao return pq e uma funcao que permite ajeitar o que queremos de maior a menor e viceversa
+    return a.idade - b.idade; 
+})
 
+let nomeMaisVelho = pessoas[pessoas.length-1].nome //lengt significa quantidade de pessoas que foram registradas colocamos -1 para seleccionar o numero exacto sendo que e contado a partir de 0
+let idadeMaisVelha = pessoas[pessoas.length-1].idade
+let corDoMaisVelho = pessoas[pessoas.length-1].cor
+let animalDoMaisVelho = pessoas[pessoas.length-1].animal
 
+console.log(`Temos aqui a pessoa mais velha que é ${nomeMaisVelho} 
+com ${idadeMaisVelha} anos de idade, sua cor favorita é ${corDoMaisVelho} 
+e seu animal favorito é ${animalDoMaisVelho}`)
 
+let pessoaMaisJovem = pessoas.sort((a ,b) => {
+    return b.idade - a.idade;
+})
 
+let nomeMaisJovem = pessoas[pessoas.length-1].nome
+let idadeMaisJovem = pessoas[pessoas.length-1].idade
+let corDoMaisJovem = pessoas[pessoas.length-1].cor
+let animalDoMaisJovem = pessoas[pessoas.length-1].animal
 
-
+console.log(`E conseguimos a pessoa mais jovem que é ${nomeMaisJovem} 
+com ${idadeMaisJovem} anos de idade, 
+sua cor favorita é ${corDoMaisJovem} 
+e seu animal favorito é ${animalDoMaisJovem}`)
 
 
 

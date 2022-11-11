@@ -1,6 +1,6 @@
 /* consulta API publica
 
-*coletar udados de um formulario
+*coletar os dados de um formulario
 *consultar API
 *Exibir resultados
 
@@ -8,7 +8,7 @@
 escolher API
 
 *escolher uma API para consulta
-*checar ocumentaçao
+*checar documentaçao
 *entender parametros e resposta
 
 formularios
