@@ -67,10 +67,15 @@ function displayValue(event){
 
 }
 
+form.addEventListener('submit', function (event){
+    event.preventDefault()
+    formEtapas[etapa].style.display ="block"
+    console.log(etapa)
+})
 
+document.querySelector('#butaoregistrar').addEventListener('click', registro, idade)
 document.querySelector('#registro').addEventListener('change', displayValue)
 document.querySelector('#idade').addEventListener('change', idade)
-document.querySelector('#butaoregistrar').addEventListener('click', registro, idade)
 
 
 
