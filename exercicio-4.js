@@ -34,46 +34,48 @@ document.querySelector('#newTask').addEventListener('change', addNewTask)
 
 //exercicio da aula 10
 
-function registro() {
-    let input = document.querySelector('#registro');
+let input = document.querySelector('#registro');
+let input2 = document.querySelector('#idade');
+
+let pessoas = []
+let nome
+let idade
+
+function Pessoa(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+}
+
+function listaDePessoas() {
+    nome = input.value
+    idade = input2.value
+    let pessoa = new Pessoa(nome, idade)
+    pessoas.push(pessoa)
+    console.log(pessoas)
+}
+
+function registrar() {
+
+    let lista = document.querySelector('#lista')
 
     let registro = input.value;
-    input.value= '';
-    //console.log(registro);
+    input.value = '';
+
+    let idade = input2.value;
+    input2.value = '';
 
     let listItem = document.createElement('li');
-    listItem.textContent = registro;
-
-    lista.appendChild(listItem);
+    listItem.textContent = `${registro} ${idade} anos`;
     
-
-}
-function idade() {
-    let input = document.querySelector('#idade');
-
-    let idade = input.value;
-    input.value= '';
-    console.log(idade);
-
-    let listItem = document.createElement('li');
-    listItem.textContent = idade;
+    lista.appendChild(listItem);
 }
 
-//console.log(`registro de: ${registro}`)
 
-function displayValue(event){
-    console.log(event.target);
-    console.log(event.target.value);
+document.querySelector('#butaoregistrar').addEventListener('click', listaDePessoas)
 
-}
+document.querySelector('#butaoregistrar').addEventListener('click', registrar)
 
-form.addEventListener('submit', function (event){
-    event.preventDefault()
-    formEtapas[etapa].style.display ="block"
-    console.log(etapa)
-})
-
-document.querySelector('#butaoregistrar').addEventListener('click', registro, idade)
+/*
 document.querySelector('#registro').addEventListener('change', displayValue)
 document.querySelector('#idade').addEventListener('change', idade)
 
