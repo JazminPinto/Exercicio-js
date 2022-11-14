@@ -1,6 +1,6 @@
 //exercicio da aula 13
 
-function validateEmail(e) {
+/*function validateEmail(e) {
     let field = e.target;
     let fieldValue = field.value;
 
@@ -75,31 +75,40 @@ function disableSubmit(){
 document.querySelectorAll('input').forEach(el => el.classList.add ('not-validated'));
 document.querySelectorAll('input.email').forEach(el => el.addEventListener ('keyup', validateEmail));
 document.querySelectorAll('input:required').forEach(el => el.addEventListener ('keyup', validateNotEmpty));
-
-
-
-
-
-/* consulta API publica
-
-*coletar os dados de um formulario
-*consultar API
-*Exibir resultados
-
-
-escolher API
-
-*escolher uma API para consulta
-*checar documentaçao
-*entender parametros e resposta
-
-formularios
-
-*receber dados que serao usados como parametros
-*consulta API
-
-exibicao de dados
-
-*exibir dados recebidos pela API
-*filtrar esse resultado
 */
+
+
+
+//EXERCICIO 5- API-
+
+// consulta API publica
+
+
+
+//coletar os dados de um formulario
+//consultar API
+//Exibir resultados
+
+let cep
+
+let valorCep = 59084320
+
+fetch(`https://viacep.com.br/ws/${valorCep}/json/`)
+    .then(response => response.json())
+        .then(data => cep = data)
+
+// escolher API
+
+//*escolher uma API para consulta
+//*checar documentaçao
+//*entender parametros e resposta
+
+//formularios
+
+//*receber dados que serao usados como parametros
+//*consulta API
+
+//exibicao de dados
+
+//*exibir dados recebidos pela API
+//*filtrar esse resultado
