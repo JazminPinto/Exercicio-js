@@ -97,6 +97,14 @@ fetch(`https://viacep.com.br/ws/${valorCep}/json/`)
     .then(response => response.json())
         .then(data => cep = data)
 
+        console.log(cep)
+paragrafo.textContent = `${cep}`
+
+
+
+document.querySelector('#btnpesquisar').addEventListener('click', cep)
+
+
 // escolher API
 
 //*escolher uma API para consulta
