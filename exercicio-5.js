@@ -10,7 +10,7 @@
         clearError(field);
     }
 
-    field.clssList.remove('not-validated');
+    field.classList.remove('not-validated');
     checkEnableSubmit();
 
 }
